@@ -1,0 +1,28 @@
+class Heroi {
+    constructor(nomeHeroi, idadeHeroi, tipoHeroi) {
+        this.nomeHeroi = nomeHeroi;
+        this.idadeHeroi = idadeHeroi;
+        this.tipoHeroi = tipoHeroi;
+    }
+
+    atacar() {
+        let ataque;
+
+        if (this.tipoHeroi === "mago") {
+            ataque = "magia";
+        } else if (this.tipoHeroi === "guerreiro") {
+            ataque = "espada";
+        } else if (this.tipoHeroi === "monge") {
+            ataque = "artes marciais";
+        } else if (this.tipoHeroi === "ninja") {
+            ataque = "shuriken";
+        } else {
+            ataque = "ataque desconhecido";
+        }
+
+        console.log(`O ${this.tipoHeroi} ${this.nomeHeroi} atacou usando ${ataque}!`);
+    }
+}
+
+let heroi2 = new Heroi("Juliana", 20, "mago");
+heroi2.atacar(); 
